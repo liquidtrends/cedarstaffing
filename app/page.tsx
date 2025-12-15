@@ -1,65 +1,101 @@
-import Image from "next/image";
+import Hero from "@/app/components/Hero";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="bg-gray-50">
+      <Hero />
+      <section className="relative py-32 bg-gray-900 text-white overflow-hidden">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/3 w-[1200px] h-[1200px] bg-gradient-to-r from-green-500 to-green-700 opacity-20 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-green-800 opacity-20 rounded-full filter blur-2xl animate-spin-slow"></div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16">
+          <div className="bg-gray-800 bg-opacity-70 p-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+            <p className="text-gray-200 leading-relaxed text-lg">
+              To create meaningful employment for Indigenous people while delivering reliable, culturally safe staffing solutions.
+            </p>
+          </div>
+          <div className="bg-gray-800 bg-opacity-70 p-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+            <p className="text-gray-200 leading-relaxed text-lg">
+              To become Western Canada’s leading Indigenous-led workforce provider.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="bg-gray-50 py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Our Services</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transform hover:scale-105 transition duration-500">
+              <h3 className="text-2xl font-semibold mb-4 text-green-800">Janitorial & Housing Support</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Emergency janitorial</li>
+                <li>Building cleaning</li>
+                <li>Suite turnovers</li>
+                <li>Biohazard response</li>
+                <li>Junk removal</li>
+                <li>Housing maintenance</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transform hover:scale-105 transition duration-500">
+              <h3 className="text-2xl font-semibold mb-4 text-green-800">Industrial & Skilled Trades</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>General laborers, flaggers, yard watch</li>
+                <li>Pipefitters, millwrights, carpenters, welders</li>
+                <li>Scaffolders & material handling</li>
+                <li>Heavy equipment operators & safety officers</li>
+                <li>Construction site administration</li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-2xl transform hover:scale-105 transition duration-500">
+              <h3 className="text-2xl font-semibold mb-4 text-green-800">Training & Certification</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>WHMIS, First Aid/CPR, Confined Space</li>
+                <li>Fall Protection, Flagging, H2S Alive</li>
+                <li>PPE & Biohazard Safety</li>
+                <li>Indigenous cultural safety & workplace professionalism</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="relative bg-green-800 text-white py-32 overflow-hidden">
+        <div className="absolute -left-32 top-0 w-96 h-96 rounded-full bg-green-500 opacity-30 mix-blend-multiply"></div>
+        <div className="absolute -left-16 top-64 w-72 h-72 rounded-full bg-green-400 opacity-30 mix-blend-multiply"></div>
+
+        <div className="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-2/3 mb-10 md:mb-0">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Join Our Indigenous Workforce Today
+            </h2>
+            <p className="text-lg md:text-xl mb-8">
+              Be part of a culturally safe, reliable, and empowering work environment. Opportunities available across janitorial, industrial, and skilled trades.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <a
+                href="/apply"
+                className="bg-white text-green-800 px-8 py-4 rounded-full font-semibold hover:scale-105 transform transition duration-300 shadow-lg"
+              >
+                Apply Now
+              </a>
+              <a
+                href="/contact"
+                className="border border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-green-800 transform transition duration-300 shadow-lg"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    <Footer />
+    </main>
   );
 }
